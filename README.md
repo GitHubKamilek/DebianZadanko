@@ -1,6 +1,16 @@
 # Instalacja i konfiguracja systemu Debian wraz z Fluxbox
 
-## 1. Instalacja
+## Spis Treści:
+
+[1.Instalacja](#install)
+
+[2.Wstępna konfiguracja użytkownika](#xorg)
+
+[1.Instalacja i konfiguracja Środowiska graficznego fluxbox](#fluxbox)
+
+[1.Pliki konfiguracyjne](#conf)
+
+## 1. Instalacja {#install}
 
 ### Pobieranie obrazu iso:
 
@@ -42,7 +52,7 @@ Hasło: ``` user_int01 ```
 
 Klikamy dalej
 
-## 2. Wstępna konfiguracja użytkownika:
+## 2. Wstępna konfiguracja użytkownika: {#user-config}
  
 ### Dodajemy użytkownika do grupy sudo oraz instalujemy sudo
 
@@ -60,7 +70,7 @@ Dodajemy ta linie przed ``` @includedir ```
 userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 ```
 
-## 3. Instalujemy serwer Xorg
+## 3. Instalujemy serwer Xorg {#xorg}
 
 #### Instalacja
 
@@ -80,7 +90,7 @@ Plik: ``` /etc/X11/xorg.conf ``` jest pusty.
 
 Możemy wygenerować szkielet takiego pliku przez komendę:
 ``` Xorg :0 -configure ```
-poczym utworzony zostanie plik ```xorg.conf.new```
+poczym utworzony zostanie plik ``` xorg.conf.new ```
 
 Który może wyglądać tak (notka: Przykład z linuxa poza maszyną wirtualną):
 
@@ -366,7 +376,7 @@ EndSection
 
 </details>
 
-## 4. Instalacja i konfiguracja Środowiska graficznego fluxbox:
+## 4. Instalacja i konfiguracja Środowiska graficznego fluxbox: {#fluxbox}
 
 ### Instalacja
 
@@ -449,7 +459,7 @@ Pobieramy wybraną tapetę z internetu i wykonujemy polecenie:
 nitrogen <nazwa folderu z tapetami>
 ``` 
 
-## 5. Pliki konfiguracyjne:
+## 5. Pliki konfiguracyjne: {#conf}
 
 ### ``` /etc/fstab ```
 
