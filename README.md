@@ -2,15 +2,17 @@
 
 ## Spis Treści:
 
-[1.Instalacja](#install)
+[1.Instalacja](#1-instalacja)
 
-[2.Wstępna konfiguracja użytkownika](#xorg)
+[2.Wstępna konfiguracja użytkownika](#2-wst%C4%99pna-konfiguracja-u%C5%BCytkownika)
 
-[1.Instalacja i konfiguracja Środowiska graficznego fluxbox](#fluxbox)
+[3. Instalujemy serwer Xorg](#3-instalujemy-serwer-xorg)
 
-[1.Pliki konfiguracyjne](#conf)
+[4.Instalacja i konfiguracja Środowiska graficznego fluxbox](#4-instalacja-i-konfiguracja-%C5%9Brodowiska-graficznego-fluxbox)
 
-## 1. Instalacja {#install}
+[5.Pliki konfiguracyjne](#5-pliki-konfiguracyjne)
+
+## 1. Instalacja
 
 ### Pobieranie obrazu iso:
 
@@ -52,7 +54,7 @@ Hasło: ``` user_int01 ```
 
 Klikamy dalej
 
-## 2. Wstępna konfiguracja użytkownika: {#user-config}
+## 2. Wstępna konfiguracja użytkownika:
  
 ### Dodajemy użytkownika do grupy sudo oraz instalujemy sudo
 
@@ -70,7 +72,7 @@ Dodajemy ta linie przed ``` @includedir ```
 userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 ```
 
-## 3. Instalujemy serwer Xorg {#xorg}
+## 3. Instalujemy serwer Xorg
 
 #### Instalacja
 
@@ -376,7 +378,7 @@ EndSection
 
 </details>
 
-## 4. Instalacja i konfiguracja Środowiska graficznego fluxbox: {#fluxbox}
+## 4. Instalacja i konfiguracja Środowiska graficznego fluxbox:
 
 ### Instalacja
 
@@ -459,7 +461,7 @@ Pobieramy wybraną tapetę z internetu i wykonujemy polecenie:
 nitrogen <nazwa folderu z tapetami>
 ``` 
 
-## 5. Pliki konfiguracyjne: {#conf}
+## 5. Pliki konfiguracyjne:
 
 ### ``` /etc/fstab ```
 
