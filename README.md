@@ -447,7 +447,7 @@ Dodajemy w pliku ``` ~/.fluxbox/startup ``` przed ``` exec xterm ``` linijkę:
 ### Dodajemy skróty do pulpitu
 
 np.
-``` cp /usr/share/applications/firefox-esr.desktop ~/Desktop ```
+``` cp /usr/share/applications/firefox-esr.desktop ~/Desktop/ ```
 i powtarzamy to dla wszystkich pożądanych aplikacji:
 - debian-xterm.desktop
 - xpdf.desktop
