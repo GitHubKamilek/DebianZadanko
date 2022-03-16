@@ -69,6 +69,7 @@ Klikamy dalej
 Dodajemy ta linie przed ``` @includedir ```
 
 ```
+%sudo ALL=(ALL:ALL) ALL
 userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 ```
 
