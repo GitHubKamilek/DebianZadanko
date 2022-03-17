@@ -26,7 +26,7 @@ Ustawiamy w większości domyślne ustawienia zmieniamy jedynie strefę czasową
 
 #### Nazwa Hosta:
 
-``` int033 ```
+``` int0xx ```
 
 #### Domena:
 
@@ -70,7 +70,7 @@ Dodajemy ta linie przed ``` @includedir ```
 
 ```
 %sudo ALL=(ALL:ALL) ALL
-userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
+userint01 int0xx=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 ```
 #### Aby użytkownik nie musiał używać sudo do poweroff:
 
@@ -694,7 +694,7 @@ root	ALL=(ALL:ALL) ALL
 
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) ALL
-userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
+userint01 int0xx=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 # See sudoers(5) for more information on "@include" directives:
 
 @includedir /etc/sudoers.d
