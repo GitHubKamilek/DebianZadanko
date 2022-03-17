@@ -70,9 +70,9 @@ Dodajemy ta linie przed ``` @includedir ```
 
 ```
 %sudo ALL=(ALL:ALL) ALL
-userint01 int0xx=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
+userint01 int0xx=NOPASSWD: /sbin/shutdown:/sbin/reboot
 ```
-#### Aby użytkownik nie musiał używać sudo do poweroff:
+#### [Opcjonalne] Aby użytkownik nie musiał używać sudo do poweroff:
 
 ```
 ln -s /sbin/shutdown /bin/shutdown
@@ -458,6 +458,21 @@ table Icon
 	X: 30
 	Y: 30
 	Command[0]: xterm
+end
+```
+
+Ikonka do wyłączenia komputera (pobieramy ikonę z internetu): 
+
+```
+table Icon
+	Caption: Shutdown
+	ToolTip.Caption: Shutdown comupter
+	Icon: <Lokalizacja ikony pobranej z internetu>
+	Width: 48
+	Height: 48
+	X: 30
+	Y: 390
+	Command[0]: shutdown now
 end
 ```
 
