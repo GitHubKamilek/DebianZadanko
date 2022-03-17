@@ -433,39 +433,149 @@ następnie przechodzimy do folderu ``` <język np. pl>/DEBS/ ``` i instalujemy w
 
 ## Konfiguracja FluxBoxa:
 
-### Autostart
+### Instalacja Pulpitu:
 
-Dodajemy na końcu pliku ``` ~/.fluxbox/startup ``` linijkę:
-``` exec xterm ```
-Oraz podmieniamy ``` exec fluxbox ``` na ``` fluxbox ```
+#### Instalujemy IDeska:
 
-### Ikony na pulpicie
+Instalujemy paczkę idesk:
 
-Instalujemy PCman-FM oraz nitrogen
+``` sudo apt install idesk ```
 
-``` apt install pcmanfm nitrogen ```
+Tworzymy folder .idesktop:
 
-Dodajemy w pliku ``` ~/.fluxbox/startup ``` przed ``` exec xterm ``` linijkę:
+``` mkdir .idesktop/ && cd .idesktop/ ```
 
-``` pcmanfm --desktop && nitrogen --restore ```
+I tworzymy ikonki:
 
-### Dodajemy skróty do pulpitu
-
-np.
-``` cp /usr/share/applications/firefox-esr.desktop ~/Desktop/ ```
-i powtarzamy to dla wszystkich pożądanych aplikacji:
-- debian-xterm.desktop
-- xpdf.desktop
-- firefox-esr.desktop
-- openoffice4-base.desktop
-
-### Tapeta
-
-Pobieramy wybraną tapetę z internetu i wykonujemy polecenie:
+np. `xterm.lnk`:
 
 ```
-nitrogen <nazwa folderu z tapetami>
-``` 
+table Icon
+	Caption: Xterm
+	ToolTip.Caption: Emulator Terminala xterm
+	Width: 48
+	Height: 48
+	X: 30
+	Y: 30
+	Command[0]: xterm
+end
+```
+
+Powtarzamy tą konfiguracje dla każdej ikonki na pulpicie
+
+#### Autostart
+
+Otwieramy plik: `~/.fluxbox/apps`
+
+Dodajemy aplikacje do autostartu:
+
+np.
+
+```
+[startup]	{idesk}
+```
+
+#### Tapeta:
+
+``` fbsetbg <scieżka do pliku> ```
+
+#### /[Opcjonalne/] Conky:
+
+Instalujemy conky:
+``` sudo apt install conky ```
+
+Zmieniamy opcje w configu ` .config/conky.conf ` do naszych wymagań:
+Przykład
+
+<details>
+```r
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2019 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = 'darkgreen',
+    default_outline_color = 'darkgreen',
+    default_shade_color = 'darkgreen',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 60,
+    gap_y = 60,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = true,
+    own_windows_argb_visual = true,
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+conky.text = [[
+${color black}Uptime:$color $uptime
+${color black}Frequency (in MHz):$color $freq
+${color black}Frequency (in GHz):$color $freq_g
+${color black}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
+${color black}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+${color black}CPU Usage:$color $cpu% ${cpubar 4}
+${color black}Processes:$color $processes  ${color black}Running:$color $running_processes
+$hr
+${color black}File systems:
+ / $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color black}Networking:
+Up:$color ${upspeed} ${color black} - Down:$color ${downspeed}
+$hr
+${color black}Name              PID     CPU%   MEM%
+${color darkgreen} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color darkgreen} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color darkgreen} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color darkgreen} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+]]
+```
+</details>
 
 ## 5. Pliki konfiguracyjne:
 
