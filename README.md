@@ -479,7 +479,7 @@ np.
 
 ``` fbsetbg <scieżka do pliku> ```
 
-#### /[Opcjonalne/] Conky:
+#### [Opcjonalne] Conky:
 
 Instalujemy conky:
 ``` sudo apt install conky ```
@@ -488,7 +488,9 @@ Zmieniamy opcje w configu ` .config/conky.conf ` do naszych wymagań:
 Przykład
 
 <details>
+
 ```r
+
 --[[
 Conky, a system monitor, based on torsmo
 
@@ -574,7 +576,9 @@ ${color darkgreen} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color darkgreen} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color darkgreen} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 ]]
+
 ```
+
 </details>
 
 ## 5. Pliki konfiguracyjne:
