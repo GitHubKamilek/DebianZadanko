@@ -72,7 +72,12 @@ Dodajemy ta linie przed ``` @includedir ```
 %sudo ALL=(ALL:ALL) ALL
 userint01 int033=NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot
 ```
+#### Aby użytkownik nie musiał używać sudo do poweroff:
 
+```
+ln -s /sbin/shutdown /bin/shutdown
+ln -s /sbin/reboot /bin/reboot
+```
 ## 3. Instalujemy serwer Xorg
 
 #### Instalacja
