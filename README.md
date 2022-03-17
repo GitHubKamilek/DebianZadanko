@@ -2,15 +2,15 @@
 
 ## Spis Treści:
 
-[1.Instalacja](#1-instalacja)
+[1. Instalacja](#1-instalacja)
 
-[2.Wstępna konfiguracja użytkownika](#2-wst%C4%99pna-konfiguracja-u%C5%BCytkownika)
+[2. Wstępna konfiguracja użytkownika](#2-wst%C4%99pna-konfiguracja-u%C5%BCytkownika)
 
 [3. Instalujemy serwer Xorg](#3-instalujemy-serwer-xorg)
 
-[4.Instalacja i konfiguracja Środowiska graficznego fluxbox](#4-instalacja-i-konfiguracja-%C5%9Brodowiska-graficznego-fluxbox)
+[4. Instalacja i konfiguracja Środowiska graficznego fluxbox](#4-instalacja-i-konfiguracja-%C5%9Brodowiska-graficznego-fluxbox)
 
-[5.Pliki konfiguracyjne](#5-pliki-konfiguracyjne)
+[5. Pliki konfiguracyjne](#5-pliki-konfiguracyjne)
 
 ## 1. Instalacja
 
